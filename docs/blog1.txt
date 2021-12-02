@@ -1,1 +1,1 @@
-Hello ninjas
+hello, world
