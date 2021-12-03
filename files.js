@@ -12,6 +12,10 @@ const fs = require('fs');
 // writing files
 fs.writeFile('./docs/blog1.txt', "hello, world", () => {
     console.log('flie was written');
+});
+
+fs.writeFile('./docs/blog2.txt', "hello, Ninja", () => {
+    console.log('flie was written');
 })
 
 // directories
