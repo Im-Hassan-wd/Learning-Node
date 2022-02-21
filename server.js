@@ -18,7 +18,8 @@ const server = http.createServer((req, res) => {
             res.statusCode = 200;
             break;
         case '/about-me':
-            res.statusCode = 200;
+            res.statusCode = 301;
+            res.setHeader('Location', '/about')
             break;
         default:
             path += '404.html';
