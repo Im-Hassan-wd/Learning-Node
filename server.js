@@ -7,6 +7,9 @@ const server = http.createServer((req, res) => {
     //set header content type
     res.setHeader('Content-Type', 'text/html');
 
+    let path = './views';
+    
+
     // send an html file
     fs.readFile('./views/index.html', (err, data) => {
         if(err) {
