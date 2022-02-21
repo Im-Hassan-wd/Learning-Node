@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
     }
 
     // send an html file
-    fs.readFile('./views/index.html', (err, data) => {
+    fs.readFile(path, (err, data) => {
         if(err) {
             console.log(err);
             res.end();
