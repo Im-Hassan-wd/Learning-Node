@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Im-Hassan-wd/Learning-Node/issues"
   },
-  "homepage": "https://github.com/Im-Hassan-wd/Learning-Node#readme"
+  "homepage": "https://github.com/Im-Hassan-wd/Learning-Node#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
