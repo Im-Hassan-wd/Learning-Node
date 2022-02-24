@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Im-Hassan-wd/Learning-Node#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
     "lodash": "^4.17.21"
   }
