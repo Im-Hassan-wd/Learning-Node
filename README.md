@@ -10,6 +10,13 @@ V8 engine compiles JavaScript into a machine code
 - Connect to a database
 - Act as a server for content
 
+### Why use Node.js
+
+- No need to learn an extra language for server
+- Can share code between front and back end
+- Node.js has a massive community behind it
+- Huge amount of third-party packages & tools to help
+
 ### TOPICS
 
 - Introduction
