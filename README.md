@@ -2,6 +2,8 @@
 
 ### What is Node?
 
+Node.js is programming language also written in c++ and wraps V8 engine
+
 V8 engine compiles JavaScript into a machine code
 
 - Read & write files on a computer
