@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
     {title: 'Yoshi finds eggs', snippet: 'loream ipsum dolor si amet consectetur'},
     {title: 'Mario finds stars', snippet: 'loream ipsum dolor si amet consectetur'},
     {title: 'How to defeat bowser', snippet: 'loream ipsum dolor si amet consectetur'}
-  ]
-  res.render('index', { title: 'Home'});
+  ];
+  res.render('index', { title: 'Home', blogs});
 });
 
 app.get('/about', (req, res) => {
