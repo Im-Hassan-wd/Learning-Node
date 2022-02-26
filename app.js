@@ -10,6 +10,11 @@ app.set('view engine', 'ejs');
 app.listen(3000);
 
 app.get('/', (req, res) => {
+  const blogs = [
+    {title: 'yoshi finds eggs', snippet: 'loream ipsum dolor si amet consectetur'},
+    {title: 'yoshi finds eggs', snippet: 'loream ipsum dolor si amet consectetur'},
+    {title: 'yoshi finds eggs', snippet: 'loream ipsum dolor si amet consectetur'}
+  ]
   res.render('index', { title: 'Home'});
 });
 
