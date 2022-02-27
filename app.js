@@ -9,6 +9,10 @@ app.set('view engine', 'ejs');
 // listen for request
 app.listen(3000);
 
+app.use((req, res) => {
+ 
+})
+
 app.get('/', (req, res) => {
   const blogs = [
     {title: 'Yoshi finds eggs', snippet: 'loream ipsum dolor si amet consectetur'},
