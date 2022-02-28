@@ -7,7 +7,7 @@ const app = express();
 
 // connect to mongodb
 const dbURI = 'mongodb+srv://weird:imhasssanwd@05@learningnode.meubb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-mongoose.connect(dbURI)
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopoogy: true});
 
 // register view engine
 app.set('view engine', 'ejs');
