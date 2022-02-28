@@ -6,8 +6,10 @@ const { MongoClient } = require("mongodb");
 const app = express();
 
 // connect to mongodb
-const dbURI = 'mongodb+srv://weird:imhasssanwd@05@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority';
-MongoClient.connect(dbURI)
+// const url = "mongodb+srv://<username>:<password>@clustername.mongodb.net/test?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true";
+const dbURI = 'mongodb+srv://weird:imhasssanwd@05@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true';
+const client = new MongoClient(dbURI)
+client.connect()
  .then(result => console.log('connected to db'))
  .catch(err => console.log(err))
 
