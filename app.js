@@ -1,13 +1,15 @@
 const express = require('express');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
+const { MongoClient } = require("mongodb");
 
 // express app
 const app = express();
 
 // connect to mongodb
-const dbURI = 'mongodb+srv://weird:imhasssanwd@05@learningnode.meubb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopoogy: true});
+const dbURI = 'mongodb+srv://weird:imhasssanwd@05@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority';
+MongoClient.connect(dbURI)
+ .then(result => console.log('connected to db'))
+ .catch(err => console.log(err))
 
 // register view engine
 app.set('view engine', 'ejs');
