@@ -1,4 +1,4 @@
-const blogSchema = {
+const blogSchema = ({
     title: {
         type: String,
         required: true
@@ -11,4 +11,4 @@ const blogSchema = {
         type: String,
         required: true
     }
-}
+}, { timestamp: true})
