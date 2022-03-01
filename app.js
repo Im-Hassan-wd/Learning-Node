@@ -6,7 +6,7 @@ const { MongoClient } = require("mongodb");
 const app = express();
 
 // connect to mongodb
-const dbURI = 'mongodb+srv://weird:imhasssanwd@05@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true';
+const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true';
 const client = new MongoClient(dbURI)
 client.connect()
  .then(result => console.log('connected to db'))
