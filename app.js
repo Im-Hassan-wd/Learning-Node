@@ -9,7 +9,7 @@ const app = express();
 const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true';
 const client = new MongoClient(dbURI)
 client.connect()
- .then(result => console.log('connected to db'))
+ .then(result => app.listen(3000))
  .catch(err => console.log(err))
 
 // register view engine
