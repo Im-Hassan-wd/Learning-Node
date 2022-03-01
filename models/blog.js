@@ -6,5 +6,9 @@ const blogSchema = {
     snippet: {
         type: String,
         required: true
+    },
+    body: {
+        type: String,
+        required: true
     }
 }
