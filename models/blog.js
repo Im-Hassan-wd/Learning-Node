@@ -1,3 +1,5 @@
+const dbName = "nodeblog";
+
 const blogSchema = ({
     title: {
         type: String,
@@ -11,4 +13,6 @@ const blogSchema = ({
         type: String,
         required: true
     }
-}, { timestamp: true})
+}, { timestamps: true});
+
+const Blog = 
