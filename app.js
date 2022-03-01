@@ -5,6 +5,9 @@ const { MongoClient } = require("mongodb");
 // express app
 const app = express();
 
+// db
+const dbName = "node-blog";
+
 // connect to mongodb
 const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true';
 const client = new MongoClient(dbURI)
