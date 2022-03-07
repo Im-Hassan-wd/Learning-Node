@@ -1,7 +1,5 @@
 const  mongoose  = require('mongoose');
-const Schema = require('mongoose');
-
-const dbName = "nodeblog";
+const Schema = mongoose.Schema;
 
 const blogSchema = ({
     title: {
