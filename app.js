@@ -28,6 +28,10 @@ app.get('/aad-blog', (req, res) => {
   });
 
   blog.save()
+   .then(result => {
+     res.send(result)
+   })
+   .catch(err => console.log(err));
 })
 
 app.get('/', (req, res) => {
