@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const Blog = require('./models/blog');
 
 // express app
 const app = express();
@@ -17,6 +18,17 @@ app.set('view engine', 'ejs');
 // middleware and static files
 app.use(express.static('public'));
 app.use(morgan('dev'));
+
+// mongoose and mongo snadbox routes
+app.get('/aad-blog', (req, res) => {
+  const blog = new Blog({
+    title: 'new blog',
+    snippet: 'about my new blog',
+    body: 'more about my new blog'
+  });
+
+  blog.save()
+})
 
 app.get('/', (req, res) => {
   const blogs = [
