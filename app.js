@@ -5,9 +5,6 @@ const { mongoose } = require('mongoose');
 // express app
 const app = express();
 
-// db
-const dbName = "node-blog";
-
 // connect to mongodb
 const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority';
 mongoose.connect(dbURI);
