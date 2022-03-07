@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const { MongoClient } = require("mongodb");
+const { mongoose } = require('mongoose');
 
 // express app
 const app = express();
@@ -9,8 +10,8 @@ const app = express();
 const dbName = "node-blog";
 
 // connect to mongodb
-const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority&useNewUrlParser=true&useUnifiedTopology=true';
-const client = new MongoClient(dbURI)
+const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority';
+mongoose
 client.connect()
  .then(result => {
    app.listen(3000)
