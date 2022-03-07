@@ -8,14 +8,11 @@ const app = express();
 // connect to mongodb
 const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
-  .then(result => console.log('connected to db'))
-  .catch(err => console.log(eer));
+  .then(result => app.listen(3000))
+  .catch(err => console.log(eer))
 
 // register view engine
 app.set('view engine', 'ejs');
-
-// listening for request
-app.listen(3000);
 
 // middleware and static files
 app.use(express.static('public'));
