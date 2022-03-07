@@ -11,12 +11,7 @@ const dbName = "node-blog";
 
 // connect to mongodb
 const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority';
-mongoose
-client.connect()
- .then(result => {
-   app.listen(3000)
- })
- .catch(err => console.log(err))
+mongoose.connect(dbURI);
 
 // register view engine
 app.set('view engine', 'ejs');
