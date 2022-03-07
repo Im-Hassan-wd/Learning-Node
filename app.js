@@ -20,7 +20,7 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 
 // mongoose and mongo snadbox routes
-app.get('/aad-blog', (req, res) => {
+app.get('/add-blog', (req, res) => {
   const blog = new Blog({
     title: 'new blog',
     snippet: 'about my new blog',
