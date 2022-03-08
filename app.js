@@ -33,7 +33,7 @@ app.get('/about', (req, res) => {
 app.get('/blogs', (req, res) => {
   Blog.find()
    .then(result => {
-
+     res.render('index', { title: 'All Blogs', blogs: result})
    })
    .catch(err => {
      console.log(err);
