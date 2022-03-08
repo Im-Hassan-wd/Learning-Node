@@ -42,6 +42,16 @@ app.get('/all-blogs', (req, res) => {
    .catch(err => { 
      console.log(err);
    });
+});
+
+app.get('/single-blog', (req, res) => {
+  Blog.findById('6226b972fdb04dd710497cfd')
+   then(result => {
+     res.send(result)
+   })
+   .catch(err => { 
+     console.log(err);
+   });
 })
 
 app.get('/', (req, res) => {
