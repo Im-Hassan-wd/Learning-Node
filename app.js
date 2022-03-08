@@ -28,7 +28,17 @@ app.get('/about', (req, res) => {
   res.render('about', { title: 'about'});
 });
 
-app.get('/blogs')
+
+// blog routes
+app.get('/blogs', (req, res) => {
+  Blog.find()
+   .then(result => {
+
+   })
+   .catch(err => {
+     console.log(err);
+   })
+})
 
 app.get('/blogs/create', (req, res) => {
   res.render('create', { title: 'create a new blog'});
