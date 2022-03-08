@@ -19,53 +19,16 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(morgan('dev'));
 
-// mongoose and mongo snadbox routes
-app.get('/add-blog', (req, res) => {
-  const blog = new Blog({
-    title: 'new blog 3',
-    snippet: 'about my new blog',
-    body: 'more about my new blog'
-  });
-
-  blog.save()
-   .then(result => {
-     res.send(result)
-   })
-   .catch(err => console.log(err));
-});
-
-app.get('/all-blogs', (req, res) => {
-  Blog.find()
-   .then(result => {
-     res.send(result);
-   })
-   .catch(err => { 
-     console.log(err);
-   });
-});
-
-app.get('/single-blog', (req, res) => {
-  Blog.findById('6226b972fdb04dd710497cfd')
-   .then(result => {
-     res.send(result)
-   })
-   .catch(err => { 
-     console.log(err);
-   });
-})
-
+// routes
 app.get('/', (req, res) => {
-  const blogs = [
-    {title: 'Yoshi finds eggs', snippet: 'loream ipsum dolor si amet consectetur'},
-    {title: 'Mario finds stars', snippet: 'loream ipsum dolor si amet consectetur'},
-    {title: 'How to defeat bowser', snippet: 'loream ipsum dolor si amet consectetur'}
-  ];
-  res.render('index', { title: 'Home', blogs});
+  res.redirect('/blogs');
 });
 
 app.get('/about', (req, res) => {
   res.render('about', { title: 'about'});
 });
+
+app.get('/blogs')
 
 app.get('/blogs/create', (req, res) => {
   res.render('create', { title: 'create a new blog'});
