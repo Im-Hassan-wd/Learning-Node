@@ -22,7 +22,7 @@ app.use(morgan('dev'));
 // mongoose and mongo snadbox routes
 app.get('/add-blog', (req, res) => {
   const blog = new Blog({
-    title: 'new blog',
+    title: 'new blog 3',
     snippet: 'about my new blog',
     body: 'more about my new blog'
   });
@@ -32,6 +32,16 @@ app.get('/add-blog', (req, res) => {
      res.send(result)
    })
    .catch(err => console.log(err));
+});
+
+app.get('/all-blogs', (req, res) => {
+  Blog.find()
+   .then(result => {
+     res.send(result);
+   })
+   .catch(err => { 
+     console.log(err);
+   });
 })
 
 app.get('/', (req, res) => {
