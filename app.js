@@ -38,6 +38,10 @@ app.get('/blogs', (req, res) => {
    .catch(err => {
      console.log(err);
    })
+});
+
+app.post('/blogs', (req, res) => {
+  //
 })
 
 app.get('/blogs/create', (req, res) => {
