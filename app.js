@@ -9,7 +9,7 @@ const app = express();
 // connect to mongodb
 const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
-  .then(result => app.listen(3000))
+  .then(result => app.listen(8000))
   .catch(err => console.log(eer))
 
 // register view engine
@@ -31,7 +31,7 @@ app.get('/about', (req, res) => {
 
 // blog routes
 app.get('/blogs', (req, res) => {
-  Blog.find()
+  Blog.find().sort({ createdAt: -1})
    .then(result => {
      res.render('index', { title: 'All Blogs', blogs: result})
    })
