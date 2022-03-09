@@ -59,6 +59,9 @@ app.get('/blogs/:id', (req, res) => {
    .then(result => {
      render('details', { blog: result, title: "Blog Details"})
    })
+   .catch(err => {
+     console.log(err);
+   });
 })
 
 app.get('/blogs/create', (req, res) => {
