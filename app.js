@@ -55,7 +55,10 @@ app.post('/blogs', (req, res) => {
 
 app.get('/blogs/:id', (req, res) => {
   const id = req.params.id;
-  console.log(id)
+  Blog.findById(id)
+   .then(result => {
+     render('details', { blog: result, title: "Blog Details"})
+   })
 })
 
 app.get('/blogs/create', (req, res) => {
