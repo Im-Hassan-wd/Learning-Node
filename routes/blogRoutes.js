@@ -1,16 +1,9 @@
 const express = require('express');
-const Blog = require('../models/blog');
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  Blog.find().sort({ createdAt: -1})
-   .then(result => {
-     res.render('index', { title: 'All Blogs', blogs: result})
-   })
-   .catch(err => {
-     console.log(err);
-   })
+  
 });
 
 router.post('/', (req, res) => {
