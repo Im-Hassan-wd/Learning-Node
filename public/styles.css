@@ -71,7 +71,7 @@ h3 {
   color: crimson;
 }
 /* details styles */
-.details {
+/* .details {
   position: relative;
 }
 .delete {
@@ -84,7 +84,7 @@ h3 {
 .delete:hover {
   cursor: pointer;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-}
+} */
 /* create styles */
 .create-blog form {
   max-width: 400px;
