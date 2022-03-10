@@ -1,10 +1,8 @@
 const express = require('express');
-
+const blogController = require('../controller/blogController')
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  
-});
+router.get('/', blogController.blog_index);
 
 router.post('/', (req, res) => {
   const blog = new Blog(req.body);
@@ -22,17 +20,7 @@ router.get('/create', (req, res) => {
   res.render('create', { title: 'create a new blog'});
 });
 
-router.get('/:id', (req, res) => {
-  const id = req.params.id;
-  
-  Blog.findById(id)
-   .then(result => {
-     res.render('details', { blog: result, title: "Blog Details"})
-   })
-   .catch(err => {
-     console.log(err);
-   });
-});
+router.get('/:id', blogController.blog_details);
 
 router.delete('/:id', (req, res) => {
   const id = req.params.id;
