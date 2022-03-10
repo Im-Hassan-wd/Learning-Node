@@ -50,4 +50,6 @@ router.delete('/blogs/:id', (req, res) => {
 
 router.get('/blogs/create', (req, res) => {
   res.render('create', { title: 'create a new blog'});
-})
+});
+
+module.exports = router;
