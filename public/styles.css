@@ -65,7 +65,10 @@ h3 {
   display: block;
   margin: 40px 0;
   padding-left: 30px;
-  border-left: 4px solid crimson;
+  border-left: 3px solid crimson;
+}
+.blogs a:hover h3 {
+  color: crimson;
 }
 /* details styles */
 /* create styles */
