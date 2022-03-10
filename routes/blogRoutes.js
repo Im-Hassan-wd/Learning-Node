@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-app.get('/blogs', (req, res) => {
+router.get('/blogs', (req, res) => {
   Blog.find().sort({ createdAt: -1})
    .then(result => {
      res.render('index', { title: 'All Blogs', blogs: result})
@@ -12,7 +12,7 @@ app.get('/blogs', (req, res) => {
    })
 });
 
-app.post('/blogs', (req, res) => {
+router.post('/blogs', (req, res) => {
   const blog = new Blog(req.body);
 
   blog.save()
@@ -24,7 +24,7 @@ app.post('/blogs', (req, res) => {
    })
 });
 
-app.get('/blogs/:id', (req, res) => {
+router.get('/blogs/:id', (req, res) => {
   const id = req.params.id;
   
   Blog.findById(id)
@@ -36,7 +36,7 @@ app.get('/blogs/:id', (req, res) => {
    });
 });
 
-app.delete('/blogs/:id', (req, res) => {
+router.delete('/blogs/:id', (req, res) => {
   const id = req.params.id;
 
   Blog.findByIdAndDelete(id)
@@ -48,6 +48,6 @@ app.delete('/blogs/:id', (req, res) => {
    });
 });
 
-app.get('/blogs/create', (req, res) => {
+router.get('/blogs/create', (req, res) => {
   res.render('create', { title: 'create a new blog'});
 })
