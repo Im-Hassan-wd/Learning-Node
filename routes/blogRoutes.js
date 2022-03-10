@@ -1,5 +1,5 @@
 const express = require('express');
-const Blog = require('./models/blog');
+const Blog = require('../models/blog');
 
 const router = express.Router();
 
@@ -25,6 +25,10 @@ router.post('/blogs', (req, res) => {
    })
 });
 
+router.get('/blogs/create', (req, res) => {
+  res.render('create', { title: 'create a new blog'});
+});
+
 router.get('/blogs/:id', (req, res) => {
   const id = req.params.id;
   
@@ -47,10 +51,6 @@ router.delete('/blogs/:id', (req, res) => {
    .catch(err => {
      console.log(err);
    });
-});
-
-router.get('/blogs/create', (req, res) => {
-  res.render('create', { title: 'create a new blog'});
 });
 
 module.exports = router;
