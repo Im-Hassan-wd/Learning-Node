@@ -1,3 +1,7 @@
+const express = require('express');
+
+const router = express.Router();
+
 app.get('/blogs', (req, res) => {
   Blog.find().sort({ createdAt: -1})
    .then(result => {
