@@ -2,12 +2,8 @@ const Blog = require('../models/blog');
 
 const blog_index = (req, res) => {
     Blog.find().sort({ createdAt: -1})
-   .then(result => {
-     res.render('blogs/index', { title: 'All Blogs', blogs: result})
-   })
-   .catch(err => {
-     res.render('404', { title: 'Blog not found'});
-   });
+   .then(result =>  res.render('blogs/index', { title: 'All Blogs', blogs: result }))
+   .catch(err => res.status(404).render('404', { title: 'Blog not found' }));
 }
 
 const blog_details = (req, res) => {
