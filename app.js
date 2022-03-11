@@ -72,7 +72,7 @@ app.delete('/blogs/:id', (req, res) => {
      res.json({ redirect: '/blogs'})
    })
    .catch(err => {
-
+     console.log(err);
    });
 });
 
