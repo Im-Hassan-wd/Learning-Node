@@ -62,6 +62,18 @@ app.get('/blogs/:id', (req, res) => {
    .catch(err => {
      console.log(err);
    });
+});
+
+app.delete('/blogs/:id', (req, res) => {
+  const id = req.params.id;
+
+  Blog.findByIdAndDelete(id)
+   .then(result => {
+
+   })
+   .catch(err => {
+
+   })
 })
 
 app.get('/blogs/create', (req, res) => {
