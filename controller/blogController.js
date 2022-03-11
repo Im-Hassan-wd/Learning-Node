@@ -10,17 +10,12 @@ const blog_details = (req, res) => {
     const id = req.params.id;
   
     Blog.findById(id)
-    .then(result => {
-        res.render('blogs/details', { blog: result, title: "Blog Details"})
-    })
-    .catch(err => {
-        console.log(err);
-    });
+    .then(result =>  res.render('blogs/details', { blog: result, title: "Blog Details" }))
+    .catch(err => res.status(404).render('404', { title: 'Blog not found' }));
 }
 
-const blog_create_get = (req, res) => {
-    res.render('blogs/create', { title: 'create a new blog'});
-}
+const blog_create_get = (req, res) => res.render('blogs/create', { title: 'create a new blog'});
+
 
 const blog_create_post = (req, res) => {
     const blog = new Blog(req.body);
