@@ -10,7 +10,7 @@ const app = express();
 const dbURI = 'mongodb+srv://weird:test123@learningnode.meubb.mongodb.net/nodeblog?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
   .then(result => app.listen(8000))
-  .catch(err => console.log(eer))
+  .catch(err => console.log(err))
 
 // register view engine
 app.set('view engine', 'ejs');
