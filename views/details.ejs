@@ -14,5 +14,12 @@
 
   <%- include("./partials/footer.ejs") %>
 
+  <script>
+      const trashcan = document.querySelector('a.delete');
+
+      trashcan.addEventListener('click', (e) => {
+          const endpoint = `/blogs/${trashcan.dataset.id}`;
+      })
+  </script>
 </body>
 </html>
