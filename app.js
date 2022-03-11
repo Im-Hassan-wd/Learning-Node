@@ -69,12 +69,12 @@ app.delete('/blogs/:id', (req, res) => {
 
   Blog.findByIdAndDelete(id)
    .then(result => {
-
+     res.json({ redirect: '/blogs'})
    })
    .catch(err => {
 
-   })
-})
+   });
+});
 
 app.get('/blogs/create', (req, res) => {
   res.render('create', { title: 'create a new blog'});
