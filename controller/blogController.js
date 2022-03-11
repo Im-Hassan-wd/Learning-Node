@@ -21,12 +21,8 @@ const blog_create_post = (req, res) => {
     const blog = new Blog(req.body);
 
     blog.save()
-    .then(result => {
-        res.redirect('/')
-    })
-    .catch(err =>  {
-        console.log(err);
-    })
+    .then(result => res.redirect('/'))
+    .catch(err => console.log(err))
 }
 
 const blog_delete = (req, res) => {
