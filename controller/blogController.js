@@ -6,7 +6,7 @@ const blog_index = (req, res) => {
      res.render('blogs/index', { title: 'All Blogs', blogs: result})
    })
    .catch(err => {
-     console.log(err);
+     res.render('404', { title: 'Blog not found'});
    });
 }
 
