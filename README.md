@@ -26,4 +26,7 @@ V8 engine compiles JavaScript into a machine code
 - NPM
 - Express
 - EJS, View Engines
-- ...
+- Middleware
+- MongoDB
+- Get, Post & Delete request
+- Express router & MVC
